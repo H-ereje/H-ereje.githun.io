@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>My Online Store</title>
+    <style>
+      /* Estilos CSS para el botón de compra */
+      .comprar {
+        background-color: #4CAF50; /* Color de fondo verde */
+        border: none;
+        color: white; /* Color de texto blanco */
+        padding: 10px 20px; /* Espaciado interno del botón */
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bienvenido a My Online Store</h1>
+    <p>Selecciona un producto para comprar:</p>
+    <ul>
+      <li>
+        <h2>Producto 1</h2>
+        <p>Precio: $10</p>
+        <a href="https://wa.me/3008084377?text=Hola! Me gustaría comprar el Producto 1"> <!-- Enlace a WhatsApp con el número y mensaje predefinidos -->
+          <button class="comprar">Comprar</button> <!-- Botón de compra -->
+        </a>
+      </li>
+      <li>
+        <h2>Producto 2</h2>
+        <p>Precio: $20</p>
+        <a href="https://wa.me/3008084377?text=Hola! Me gustaría comprar el Producto 2"> <!-- Enlace a WhatsApp con el número y mensaje predefinidos -->
+          <button class="comprar">Comprar</button> <!-- Botón de compra -->
+        </a>
+      </li>
+      <li>
+        <h2>Producto 3</h2>
+        <p>Precio: $30</p>
+        <a href="https://wa.me/3008084377?text=Hola! Me gustaría comprar el Producto 3"> <!-- Enlace a WhatsApp con el número y mensaje predefinidos -->
+          <button class="comprar">Comprar</button> <!-- Botón de compra -->
+        </a>
+      </li>
+    </ul>
+  </body>
+</html>
+
+<script>
+  // JavaScript para ocultar el número de WhatsApp
+  const telefono = "3008084377"; // Número de WhatsApp
+  const texto = "Hola! Me gustaría comprar..."; // Mensaje predefinido
+  const enlaces = document.getElementsByTagName("a");
+  for (let i = 0; i < enlaces.length; i++) {
+    enlaces[i].href = enlaces[i].href.replace("3008084377", telefono).replace("Hola! Me gustaría comprar", texto); // Reemplazar el número y mensaje en cada enlace
+  }
+</script>
